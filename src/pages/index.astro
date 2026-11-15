@@ -1,11 +1,91 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout
+  title="Muhamad Ihsan, S.Ud., Gr. — Personal Space"
+  description="Ruang pemikiran, pengetahuan, pendidikan, dan teknologi."
+>
+
+  <section class="hero">
+    <p class="eyebrow">PERSONAL KNOWLEDGE SPACE</p>
+
+    <h1>
+      Thinking, Learning,<br />
+      Teaching & Building.
+    </h1>
+
+    <p class="hero-description">
+      Ruang pribadi untuk mencatat pemikiran,
+      mengembangkan pengetahuan, berbagi pengalaman,
+      dan membangun sesuatu yang bermanfaat.
+    </p>
+
+    <a class="primary-link" href="#about">
+      Mengenal lebih jauh →
+    </a>
+  </section>
+
+  <section class="intro-section" id="about">
+    <p class="eyebrow">ABOUT THIS SPACE</p>
+
+    <h2>Selamat datang di ruang saya.</h2>
+
+    <p>
+      Saya Muhamad Ihsan, S.Ud., Gr.
+      Ruang ini merupakan dokumentasi perjalanan
+      intelektual, pendidikan, dan eksplorasi teknologi.
+    </p>
+  </section>
+
+  <section class="content-section">
+    <p class="eyebrow">EXPLORE</p>
+    <h2>Ruang pengetahuan</h2>
+
+    <div class="category-grid">
+
+      <article class="category-card" id="writing">
+        <span>01 / WRITING</span>
+        <h3>Writing</h3>
+        <p>
+          Gagasan, esai, refleksi, dan pemikiran.
+        </p>
+      </article>
+
+      <article class="category-card" id="knowledge">
+        <span>02 / KNOWLEDGE</span>
+        <h3>Knowledge</h3>
+        <p>
+          Catatan ilmu, literatur, dan pembelajaran.
+        </p>
+      </article>
+
+      <article class="category-card" id="education">
+        <span>03 / EDUCATION</span>
+        <h3>Education</h3>
+        <p>
+          Pendidikan, pengajaran, dan pengalaman madrasah.
+        </p>
+      </article>
+
+      <article class="category-card" id="technology">
+        <span>04 / TECHNOLOGY</span>
+        <h3>Technology</h3>
+        <p>
+          JavaScript, software engineering, dan AI.
+        </p>
+      </article>
+
+      <article class="category-card" id="projects">
+        <span>05 / PROJECTS</span>
+        <h3>Projects</h3>
+        <p>
+          Aplikasi, eksperimen, dan karya digital.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+</MainLayout>

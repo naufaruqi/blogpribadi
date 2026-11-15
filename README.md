@@ -1,46 +1,27 @@
-# Astro Starter Kit: Basics
+# blogpribadi
+
+Blog pribadi yang dibangun dengan Astro dan dipublikasikan melalui GitHub Pages.
+
+## Menjalankan secara lokal
 
 ```sh
-npm create astro@latest -- --template basics
+npm ci
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deploy ke GitHub Pages
 
-## 🚀 Project Structure
+Workflow GitHub Actions di `.github/workflows/deploy.yml` akan membangun dan
+mempublikasikan situs setiap kali ada push ke branch `main` atau `master`.
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Push project ini ke repository GitHub.
+2. Buka **Settings → Pages** pada repository.
+3. Pilih **GitHub Actions** sebagai Build and deployment source.
+4. Buka tab **Actions** untuk memantau proses deploy.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Untuk repository project biasa, konfigurasi Astro otomatis menggunakan nama
+repository sebagai base path di GitHub Actions. URL situsnya akan berbentuk
+`https://<username>.github.io/<nama-repository>/`. Saat dijalankan lokal, base
+path tetap `/`.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Perintah `npm run build` membuat hasil situs di folder `dist/`.
