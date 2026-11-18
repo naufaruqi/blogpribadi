@@ -2,6 +2,7 @@
 import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
+import { postCategories } from "./content/categories";
 
 const posts = defineCollection({
   loader: glob({
@@ -14,13 +15,7 @@ const posts = defineCollection({
     description: z.string(),
     pubDate: z.coerce.date(),
 
-    category: z.enum([
-      "Writing",
-      "Knowledge",
-      "Education",
-      "Technology",
-      "Projects",
-    ]),
+    category: z.enum(postCategories),
 
     draft: z.boolean().default(false),
   }),

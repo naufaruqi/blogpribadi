@@ -1,6 +1,10 @@
 
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+
+const base = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <MainLayout
@@ -45,45 +49,45 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <div class="category-grid">
 
-      <article class="category-card" id="writing">
+      <a class="category-card" href={`${base}writing/`}>
         <span>01 / WRITING</span>
         <h3>Writing</h3>
         <p>
           Gagasan, esai, refleksi, dan pemikiran.
         </p>
-      </article>
+      </a>
 
-      <article class="category-card" id="knowledge">
+      <a class="category-card" href={`${base}knowledge/`}>
         <span>02 / KNOWLEDGE</span>
         <h3>Knowledge</h3>
         <p>
           Catatan ilmu, literatur, dan pembelajaran.
         </p>
-      </article>
+      </a>
 
-      <article class="category-card" id="education">
+      <a class="category-card" href={`${base}education/`}>
         <span>03 / EDUCATION</span>
         <h3>Education</h3>
         <p>
           Pendidikan, pengajaran, dan pengalaman madrasah.
         </p>
-      </article>
+      </a>
 
-      <article class="category-card" id="technology">
+      <a class="category-card" href={`${base}technology/`}>
         <span>04 / TECHNOLOGY</span>
         <h3>Technology</h3>
         <p>
           JavaScript, software engineering, dan AI.
         </p>
-      </article>
+      </a>
 
-      <article class="category-card" id="projects">
+      <a class="category-card" href={`${base}projects/`}>
         <span>05 / PROJECTS</span>
         <h3>Projects</h3>
         <p>
           Aplikasi, eksperimen, dan karya digital.
         </p>
-      </article>
+      </a>
 
     </div>
   </section>
